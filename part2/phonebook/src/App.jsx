@@ -26,10 +26,12 @@ const App = () => {
   const addPerson = (event) => {
     event.preventDefault();
     const person = persons.find(person => person.name === newName)
+    console.log(person)
     if (person !== undefined) {
       if (window.confirm(`${person.name} is already added to phonebook, replace the old number with a new one?`)) {
         const url = `${baseUrl}/${person.id}`
         const newPerson = {...person, number: newNumber}
+        console.log(newPerson)
         axios
         .put(url, newPerson)
         .then((response) => {
@@ -40,6 +42,7 @@ const App = () => {
         setTimeout(() => {
           setTopMessage(null)
         }, 5000)
+        console.log(persons)
       }
       return;
     }
