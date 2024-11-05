@@ -36,7 +36,7 @@ const App = () => {
           setPersons(persons.map(p => p.id === person.id ? response.data : p))
         })
         setMessageGrade('message')
-        setTopMessage(`Successfully changed ${person.name} number to ${person.number}`)
+        setTopMessage(`Successfully changed ${person.name} number to ${newNumber}`)
         setTimeout(() => {
           setTopMessage(null)
         }, 5000)
