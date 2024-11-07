@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Persons = ({persons, deletePerson}) => {
+const People = ({persons, deletePerson}) => {
     return (
       <>
       {persons.map(person => 
@@ -11,4 +11,4 @@ const Persons = ({persons, deletePerson}) => {
     )
 }
 
-export default Persons
+export default People

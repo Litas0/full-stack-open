@@ -1,19 +1,20 @@
-const PersonForm = (props) => {
+/* eslint-disable react/prop-types */
+const PersonForm = ({onSubmit, name, nameChange, number, numberChange }) => {
     return (
       <>
-      <form onSubmit={props.onSubmit}>
+      <form onSubmit={onSubmit}>
         <div>
           Name: 
           <input 
-            value={props.name}
-            onChange={props.nameChange}
+            value={name}
+            onChange={nameChange}
           />
         </div>
         <div>
           Number:
           <input
-            value={props.number}
-            onChange={props.numberChange}
+            value={number}
+            onChange={numberChange}
           />
         </div>
         <button type="submit">Add</button>
